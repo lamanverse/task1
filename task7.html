@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Navbar & Footer</title>
+    <link rel="stylesheet" href="flex.css">
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 30px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+    list-style: none;
+    color: white;
+}
+
+ul li {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.nav-links li:hover {
+    background-color: grey;
+}
+
+.submenu {
+    display: none;
+}
+
+.nav-links li.nested:hover .submenu {
+    display:block;
+    position: absolute;
+    border: 1px solid black;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    text-align: center;
+    width: 100px;
+    font-size: 13px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+}
+
+.content {
+    text-align: center;
+    padding: 50px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="nested">
+                <a href="#">Home</a>
+                <ul class="submenu">
+                    <li>Explore Home</li>
+                    <li>Products</li>
+                </ul>
+            </li>
+            <li class="nested">
+                <a href="#">About us</a>
+                <ul class="submenu">
+                    <li>Our privacy</li>
+                    <li>Our company</li>
+                </ul>
+            </li>
+            <li class="nested">
+                <a href="#">Service</a>
+                <ul class="submenu">
+                    <li>Our rank</li>
+                    <li>Services</li>
+                </ul>
+            </li>
+            <li class="nested">
+                <a href="#">Contact us</a>
+                <ul class="submenu">
+                    <li>Phone number</li>
+                    <li>Email adress</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Welcome!</h1>
+        <p>Example of navbar and footer with flexbox</p>
+    </div>
+
+    <footer class="footer">
+        <p>@Copyright 2024. All rights deserved.</p>
+    </footer>
+</body>
+</html>
+</body>
+</html>
