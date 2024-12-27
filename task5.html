@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nested Menu</title>
+        <link rel="stylesheet" href="navbar.css">
+        <style>
+            body {
+    padding: 0;
+    margin: 0;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    background-color: lightgrey;
+    padding: 10px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    width: 100px;
+    background-color: grey ;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.submenu {
+    display: none;
+}
+
+.menu ul li.nested:hover > .submenu {
+    display: block;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 40px;
+}
+
+.menu ul li.nested:hover > .submenu .submenu {
+    left: 110px;
+    top: 0;
+}
+        </style>
+    </head>
+    <body>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#">Menu 1</a>
+                </li>
+                <li class="nested">
+                    <a href="#">Menu 2</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Menu 2.1</a>
+                        </li>
+                        <li class="nested">
+                            <a href="#">Menu 2.2</a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Menu 2.2.1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Menu 2.2.2</a>
+                                </li>
+                                <li class="nested">
+                                    <a href="#">Menu 2.2.3</a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="#">Menu 2.2.3.1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Menu 3</a>
+                </li>
+            </ul>
+        </div>
+    </body>
