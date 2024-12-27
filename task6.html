@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID TASK</title>
+    <link rel="stylesheet" href="grid.task.css">
+    <style>
+        
+.container {
+    border: 1px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-gap: 1px;
+    grid-template-areas: "a a a a a a b b"
+                         "a a a a a a b b"
+                         "a a a a a a b b"
+                         "c c d d d e f f"
+                         "c c d d d e f f"
+                         "c c d d d e f f"
+                         "c c d d d e f f"
+                         "c c d d d e f f"
+                         "c c d d d e f f"
+                         "c c d d d e h h"
+                         "c c d d d e h h"
+                         "c c d d d e h h"
+                         "c c d d d e h h"
+                         "z z z z g g g g"
+                         "z z z z g g g g"
+                         "z z z z g g g g"
+                         "k k k k g g g g"
+                         "k k k k g g g g"
+                         "x y y y y y y j"
+                         "x y y y y y y j";
+        justify-content: center ;       
+}
+
+
+.container * {
+        border: 1px dashed rgb(183, 171, 181);
+        background-color: pink;
+        color: white;
+    
+}
+
+
+.block-1{grid-area: a;}
+.block-2{grid-area: b;}
+.block-3{grid-area: c;}
+.block-4{grid-area: d;}
+.block-5{grid-area: e;}
+.block-6{grid-area: f;}
+.block-7{grid-area: h;}
+.block-8{grid-area: g;}
+.block-9{grid-area: x;}
+.block-10{grid-area: y;}
+.block-11{grid-area: z;}
+.block-12{grid-area: j;}
+.block-13{grid-area: k;}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block-1">block-1</div>
+        <div class="block-2">block-2</div>
+        <div class="block-3">block-3</div>
+        <div class="block-4">block-4</div>
+        <div class="block-5">block-5</div>
+        <div class="block-6">block-6</div>
+        <div class="block-7">block-7</div>
+        <div class="block-8">block-8</div>
+        <div class="block-9">block-9</div>
+        <div class="block-10">block-10</div>
+        <div class="block-11">block-11</div>
+        <div class="block-12">block-12</div>
+        <div class="block-13">block-13</div>
+    </div>
+</body>
+</html>
