@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="page.css">
+    <title>Page</title>
+    <style>
+        .container {
+    border: 1px solid white;
+    display: grid;
+    
+    grid-template-rows: 1fr auto 4fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: "a a a"
+                         "d b e"
+                         "d b e"
+                         "d b e"
+                         "c c c";
+    
+    
+}
+* {
+    box-sizing: border-box;
+}
+[class^="col-"] {
+    float:left;
+}
+
+
+.container * {
+    border: 1px solid #DAF1DE;
+    background-color: pink;
+    border-radius: 5px;
+    color: white;
+}
+
+.block-1{
+    grid-area: a;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+.block-2{grid-area: b;}
+.block-3{grid-area: c;}
+.block-4{grid-area: d;}
+.block-5{grid-area: e;}
+
+.row {
+    clear:both;
+    display:table;
+}
+
+.mobile-menu {
+    visibility: visible;
+}
+
+.mobile-menu span {
+    font-weight: bold;
+}
+
+.web-menu {
+    background-color: rgb(159, 137, 141);
+}
+
+.web-menu ul li {
+    display: inline-block;
+    color: white;
+}
+
+.col-1{width: 10%;}
+.col-2{width: 20%;}
+.col-3{width: 30%;}
+.col-4{width: 40%;}
+.col-5{width: 50%;}
+.col-6{width: 60%;}
+.col-7{width: 70%;}
+.col-8{width: 80%;}
+.col-9{width: 90%;}
+.col-10{width: 100%;}
+
+
+
+@media only screen and (min-width: 600px) {
+    .block-4{grid-area: d;}
+    .block-5{grid-area: e;}
+    .web-menu{visibility: visible;}
+    .mobile-menu{visibility: hidden;}
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block-1">LOGO</div>
+        <div class="block-2">
+            <div class="row">
+                <div class="col-10">
+                    <div class="web-menu">
+                        <ul>
+                            <li>Menu1</li>
+                            <li>Menu2</li>
+                            <li>Menu3</li>
+                            <li>Menu4</li>
+                            <li>Menu5</li>
+                            <li>Menu6</li>
+                            <li>Menu7</li>
+                            <li>Menu8</li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu">
+                        <span>*****</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-3">Footer</div>
+        <div class="block-4">Left-Content</div>
+        <div class="block-5">Right-Content</div>
+    </div>
+</body>
+</html>
