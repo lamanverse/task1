@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cards and responsive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 900px;
+            box-sizing: border-box;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 1500px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 15px;
+            color: #555;
+        }
+
+     
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="Carteles sobre las emociones _Del revés (inside out)_.jpeg" >
+            <div class="card-content">
+                <h3 class="card-title">Riley</h3>
+                <p class="card-text">Riley is an 11-year-old girl who is going through a significant transition in her life.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="download.jpeg" >
+            <div class="card-content">
+                <h3 class="card-title">Joy</h3>
+                <p class="card-text">Her appearance is bright yellow with a radiant, glowing energy, reflecting her joyful and lively nature.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Sadness Inside Out.jpeg">
+            <div class="card-content">
+                <h3 class="card-title">Sadness</h3>
+                <p class="card-text">Sadness is a gentle, thoughtful, and often melancholic emotion.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Inside out anger pfp.jpeg" >
+            <div class="card-content">
+                <h3 class="card-title">Anger</h3>
+                <p class="card-text">Anger is fiery, passionate, and easily irritated emotion.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="disgust.jpeg" >
+            <div class="card-content">
+                <h3 class="card-title">Disgust</h3>
+                <p class="card-text">Disgust is portrayed as a sharp, witty, and sassy emotion.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="so cute fear Inside Out 🥹🥹.jpeg" >
+            <div class="card-content">
+                <h3 class="card-title">Fear</h3>
+                <p class="card-text">Fear is cautious, nervous and always on the look out for potential dangers.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
